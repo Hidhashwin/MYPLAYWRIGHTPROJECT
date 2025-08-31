@@ -1,6 +1,8 @@
 
 const {test,expect}= require('@playwright/test')
 const logger = require('../utils/logger')
+const { writeCustomerID } = require('../utils/excelwriter'); // ✅ Adjust path if needed
+
 
 class customeridpage{
   
@@ -13,10 +15,11 @@ class customeridpage{
     async verify_customerID_message(){
      await expect(this.page.locator(this.customeridmessage)).toBeVisible()
     }
-    async take_customerID(){
+    async take_customerID(rowIndex){
     const text= await this.page.locator(this.customerid).textContent();
     console.log("Customer ID is:",text)
-    logger.info("customer ID captured!")
+    logger.info("customer ID captured!")    
+    await writeCustomerID('./testdata/testdata.xlsx', 'CustomerData', rowIndex, text);
     await this.page.locator(this.homebutton).click()
    
 
