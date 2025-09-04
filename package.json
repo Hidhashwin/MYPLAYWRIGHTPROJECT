@@ -6,14 +6,26 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.3.0"
+    "@types/node": "^24.3.0",
+    "allure-playwright": "^3.3.3"
   },
   "dependencies": {
     "exceljs": "^4.4.0",
     "winston": "^3.17.0",
     "xlsx": "^0.18.5"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hidhashwin/MYPLAYWRIGHTPROJECT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hidhashwin/MYPLAYWRIGHTPROJECT/issues"
+  },
+  "homepage": "https://github.com/Hidhashwin/MYPLAYWRIGHTPROJECT#readme",
+  "description": ""
 }
